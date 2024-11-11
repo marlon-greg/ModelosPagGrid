@@ -2,7 +2,6 @@
 * {
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
   }
 
   /* Estilo Global: Define a fonte padrão, altura das linhas e cor para o texto */
@@ -79,12 +78,12 @@
     padding: 20px 0; /* Adiciona espaçamento interno no topo e embaixo */
   }
 
-  .hero {
+  .tituloCorpo {
     text-align: center; /* Centraliza o conteúdo na seção */
     margin-bottom: 20px; /* Adiciona espaçamento abaixo da seção */
   }
 
-  .hero h2 {
+  .tituloCorpo h2 {
     color: #0077cc; /* Define a cor do título */
     margin-bottom: 10px; /* Adiciona espaçamento abaixo do título */
   }
