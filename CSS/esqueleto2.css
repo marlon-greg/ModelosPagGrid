@@ -4,52 +4,60 @@ body {
     padding: 0; /* Remove o padding padrão do body */
 }
 
+/* Seleciona todos os filhos diretos (apenas o primeiro nível) do elemento com a classe .sistema-grid */
 .sistema-grid > * { 
-    min-height: 100px; /* Define uma altura mínima de 100px para todos os filhos diretos do contêiner .sistema-grid */
-    display: flex; /* Torna cada filho direto do grid um contêiner flex */
-    align-items: center; /* Alinha o conteúdo no eixo vertical ao centro */
-    justify-content: center; /* Alinha o conteúdo no eixo horizontal ao centro */
+    min-height: 100px; /* Define uma altura mínima de 100px para cada filho direto do .sistema-grid */
+    display: flex; /* Transforma os filhos diretos do .sistema-grid em contêineres flex */
+    align-items: center; /* Alinha os itens no centro verticalmente */
+    justify-content: center; /* Alinha os itens no centro horizontalmente */
 }
 
+/* Define o estilo para o contêiner principal do grid */
 .sistema-grid { 
-    display: grid; /* Define o contêiner como um grid */
-    grid-template-columns: repeat(2, auto); /* Cria 2 colunas com larguras automáticas */
-    grid-template-rows: repeat(4, auto); /* Cria 4 linhas com alturas automáticas */
-    gap: 5px; /* Define um espaçamento de 5px entre os itens do grid */
+    display: grid; /* Define o elemento .sistema-grid como um contêiner de grid */
+    grid-template-columns: repeat(2, auto); /* Cria 2 colunas com largura automática */
+    grid-template-rows: repeat(4, auto); /* Cria 4 linhas com altura automática */
+    gap: 5px; /* Define um espaço de 5px entre os elementos do grid */
 }
 
+/* Define o estilo para o cabeçalho */
 header { 
-    background-color: blueviolet; /* Define a cor de fundo do cabeçalho como 'blueviolet' */
-    grid-column: 1/-1; /* Faz o header ocupar todas as colunas (do início ao final) */
+    background-color: blueviolet; /* Define a cor de fundo como 'blueviolet' */
+    grid-column: 1/-1; /* Faz o header ocupar todas as colunas do grid */
     grid-row: 1; /* Posiciona o header na primeira linha do grid */
 }
 
+/* Define o estilo para a barra de navegação */
 nav { 
-    background-color: cornflowerblue; /* Define a cor de fundo da barra de navegação como 'cornflowerblue' */
-    grid-row: 2/-2; /* Faz o nav ocupar da segunda linha até a penúltima linha do grid */
-    grid-column: 1; /* Faz o nav ocupar a primeira coluna do grid */
+    background-color: cornflowerblue; /* Define a cor de fundo como 'cornflowerblue' */
+    grid-row: 2/-2; /* Faz o nav ocupar da segunda linha até a penúltima linha */
+    grid-column: 1; /* Faz o nav ocupar a primeira coluna */
 }
 
+/* Seleciona apenas o elemento <main> filho direto de .sistema-grid */
 .sistema-grid > main { 
-    display: grid; /* Transforma o main em um grid interno (grid aninhado) */
+    display: grid; /* Transforma o main em um contêiner grid aninhado */
     background-color: coral; /* Define a cor de fundo do main como 'coral' */
-    grid-auto-rows: auto; /* Ajusta as alturas das linhas automaticamente, conforme o conteúdo */
-    grid-template-columns: repeat(3, 1fr); /* Cria 3 colunas iguais dentro do grid do main */
+    grid-auto-rows: auto; /* Ajusta a altura das linhas automaticamente no grid interno */
+    grid-template-columns: repeat(3, 1fr); /* Cria 3 colunas iguais dentro do main */
     gap: 4px; /* Define um espaçamento de 4px entre os itens do grid interno */
 }
 
+/* Define o estilo para as seções */
 section { 
-    background-color: blue; /* Define a cor de fundo da section como 'blue' */
-    grid-column: 2/-1; /* Faz a section ocupar da segunda coluna até a última */
+    background-color: blue; /* Define a cor de fundo como 'blue' */
+    grid-column: 2/-1; /* Faz a section ocupar da segunda coluna até a última no grid */
 }
 
+/* Define o estilo para os artigos */
 article { 
-    background-color: brown; /* Define a cor de fundo do article como 'brown' */
-    min-height: 100px; /* Garante que o article tenha uma altura mínima de 100px */
+    background-color: brown; /* Define a cor de fundo como 'brown' */
+    min-height: 100px; /* Garante uma altura mínima de 100px */
 }
 
+/* Define o estilo para o rodapé */
 footer { 
-    background-color: chocolate; /* Define a cor de fundo do rodapé como 'chocolate' */
-    grid-column: 1/-1; /* Faz o footer ocupar todas as colunas (do início ao final) */
+    background-color: chocolate; /* Define a cor de fundo como 'chocolate' */
+    grid-column: 1/-1; /* Faz o footer ocupar todas as colunas do grid */
     grid-row: -2/-1; /* Posiciona o footer da penúltima linha até a última linha */
 }
