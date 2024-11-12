@@ -1,0 +1,103 @@
+body{
+    background-color: bisque;
+    margin: 0;
+    padding: 0;
+}
+
+header > *{
+    background-color: blue;
+    min-height: 50px;
+    display: grid;
+    align-items: center;
+    justify-content: center;
+    margin: 0;
+    padding: 0;
+}
+
+header{
+    display: grid;
+    grid-template-rows: repeat(4, auto);
+    gap: 5px;
+    margin: 0;
+    padding: 0;
+}
+nav{
+    background-color: aqua;
+    grid-row: 2;
+/*    align-items: start;
+    justify-content: left;*/
+}
+.titNav{
+    background-color: brown;
+    grid-row: 1;
+}
+main> *{
+    background-color: blue;
+    min-height: 0px;
+    display: grid;
+    align-items: center;
+    justify-content: center;
+}
+main{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 5px;
+}
+
+main> section{
+    display: grid;
+    grid-template-rows: repeat(2, auto);
+    grid-template-columns: 100%;
+    gap: 5px;
+}
+
+section{
+    grid-column: 1/-2;
+    background-color: chartreuse;
+}
+
+.Amaior{
+    background-color: chocolate;
+    grid-row: 1;
+    text-align: center;
+    height: 100%;
+   /* align-items: center;
+    justify-content: center;*/
+}
+
+.Amenor{
+    background-color: lightslategray;
+    grid-row: 2;
+  /*  text-align: center;*/
+    height: 100%;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+}
+
+section> .Amenor{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 5px;
+}
+.aside-interno{
+    grid-column: 4;
+    background-color: cornflowerblue;
+    margin: 8px;
+    height: 100%;
+}
+.contAInterno{
+    background-color: blueviolet;
+    grid-column: 1/4;
+    text-align: center;
+    height: 100%;
+}
+
+.aside-lateral{
+    height: 500px;
+}
+footer{
+    margin-top: 10px;
+    background-color: blueviolet;
+    text-align: center;
+}
