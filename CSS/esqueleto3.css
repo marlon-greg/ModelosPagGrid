@@ -1,103 +1,121 @@
-body{
-    background-color: bisque;
-    margin: 0;
-    padding: 0;
+body { 
+    background-color: bisque; /* Define a cor de fundo do body como 'bisque' */
+    margin: 0; /* Remove a margem padrão do body */
+    padding: 0; /* Remove o padding padrão do body */
 }
 
-header > *{
-    background-color: blue;
-    min-height: 50px;
-    display: grid;
-    align-items: center;
-    justify-content: center;
-    margin: 0;
-    padding: 0;
+/* Aplica estilos aos filhos diretos do header */
+header > * { 
+    background-color: blue; /* Define a cor de fundo dos filhos diretos do header como 'blue' */
+    min-height: 50px; /* Define uma altura mínima de 50px para cada filho direto */
+    display: grid; /* Torna cada filho um grid para layout interno */
+    align-items: center; /* Centraliza o conteúdo verticalmente */
+    justify-content: center; /* Centraliza o conteúdo horizontalmente */
+    margin: 0; /* Remove as margens dos filhos */
+    padding: 0; /* Remove os paddings dos filhos */
 }
 
-header{
-    display: grid;
-    grid-template-rows: repeat(4, auto);
-    gap: 5px;
-    margin: 0;
-    padding: 0;
-}
-nav{
-    background-color: aqua;
-    grid-row: 2;
-/*    align-items: start;
-    justify-content: left;*/
-}
-.titNav{
-    background-color: brown;
-    grid-row: 1;
-}
-main> *{
-    background-color: blue;
-    min-height: 0px;
-    display: grid;
-    align-items: center;
-    justify-content: center;
-}
-main{
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 5px;
+/* Define o estilo geral do header */
+header { 
+    display: grid; /* Transforma o header em um grid */
+    grid-template-rows: repeat(4, auto); /* Cria 4 linhas automáticas no grid */
+    gap: 5px; /* Define um espaçamento de 5px entre as linhas do header */
+    margin: 0; /* Remove a margem do header */
+    padding: 0; /* Remove o padding do header */
 }
 
-main> section{
-    display: grid;
-    grid-template-rows: repeat(2, auto);
-    grid-template-columns: 100%;
-    gap: 5px;
+/* Define o estilo para a barra de navegação */
+nav { 
+    background-color: aqua; /* Define a cor de fundo como 'aqua' */
+    grid-row: 2; /* Posiciona o nav na segunda linha do grid */
+    /* Os estilos comentados, caso ativados, centralizariam ou alinhariam o conteúdo */
 }
 
-section{
-    grid-column: 1/-2;
-    background-color: chartreuse;
+/* Define o estilo para o título da navegação */
+.titNav { 
+    background-color: brown; /* Define a cor de fundo como 'brown' */
+    grid-row: 1; /* Posiciona o titNav na primeira linha do grid */
 }
 
-.Amaior{
-    background-color: chocolate;
-    grid-row: 1;
-    text-align: center;
-    height: 100%;
-   /* align-items: center;
-    justify-content: center;*/
+/* Aplica estilos aos filhos diretos do main */
+main > * { 
+    background-color: blue; /* Define a cor de fundo dos filhos diretos do main como 'blue' */
+    min-height: 0px; /* Define uma altura mínima de 0px (permite ajuste pelo conteúdo) */
+    display: grid; /* Torna os filhos diretos grids para layout interno */
+    align-items: center; /* Centraliza o conteúdo verticalmente */
+    justify-content: center; /* Centraliza o conteúdo horizontalmente */
 }
 
-.Amenor{
-    background-color: lightslategray;
-    grid-row: 2;
-  /*  text-align: center;*/
-    height: 100%;
-    width: 100%;
-    align-items: center;
-    justify-content: center;
+/* Define o estilo geral do main */
+main { 
+    display: grid; /* Transforma o main em um grid */
+    grid-template-columns: repeat(3, 1fr); /* Cria 3 colunas iguais dentro do main */
+    gap: 5px; /* Define um espaçamento de 5px entre os itens do grid */
 }
 
-section> .Amenor{
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 5px;
-}
-.aside-interno{
-    grid-column: 4;
-    background-color: cornflowerblue;
-    margin: 8px;
-    height: 100%;
-}
-.contAInterno{
-    background-color: blueviolet;
-    grid-column: 1/4;
-    text-align: center;
-    height: 100%;
+/* Aplica estilo às sections diretamente filhas do main */
+main > section { 
+    display: grid; /* Transforma cada section em um grid */
+    grid-template-rows: repeat(2, auto); /* Cria 2 linhas automáticas */
+    grid-template-columns: 100%; /* Define uma única coluna ocupando 100% da largura */
+    gap: 5px; /* Define um espaçamento de 5px entre os itens do grid */
 }
 
-.aside-lateral{
-    height: 500px;
+/* Estilo para todas as sections */
+section { 
+    grid-column: 1/-2; /* Faz a section ocupar da primeira coluna até a penúltima */
+    background-color: chartreuse; /* Define a cor de fundo como 'chartreuse' */
 }
-footer{
-    margin-top: 10px;
-    background-color: blueviolet;
-    text-align: center;
+
+/* Estilo para um bloco maior dentro de section */
+.Amaior { 
+    background-color: chocolate; /* Define a cor de fundo como 'chocolate' */
+    grid-row: 1; /* Posiciona o Amaior na primeira linha do grid */
+    text-align: center; /* Centraliza o texto horizontalmente */
+    height: 100%; /* Define a altura como 100% da linha */
+}
+
+/* Estilo para um bloco menor dentro de section */
+.Amenor { 
+    background-color: lightslategray; /* Define a cor de fundo como 'lightslategray' */
+    grid-row: 2; /* Posiciona o Amenor na segunda linha do grid */
+    height: 100%; /* Define a altura como 100% da linha */
+    width: 100%; /* Define a largura como 100% */
+    align-items: center; /* Centraliza o conteúdo verticalmente (se display for ativado) */
+    justify-content: center; /* Centraliza o conteúdo horizontalmente (se display for ativado) */
+}
+
+/* Aplica estilo ao Amenor diretamente dentro de section */
+section > .Amenor { 
+    display: grid; /* Transforma o Amenor em um grid */
+    grid-template-columns: repeat(4, 1fr); /* Cria 4 colunas iguais */
+    gap: 5px; /* Define um espaçamento de 5px entre as colunas */
+}
+
+/* Estilo para um elemento aside interno */
+.aside-interno { 
+    grid-column: 4; /* Posiciona o aside na quarta coluna do grid */
+    background-color: cornflowerblue; /* Define a cor de fundo como 'cornflowerblue' */
+    margin: 8px; /* Define uma margem de 8px ao redor do aside */
+    height: 100%; /* Define a altura como 100% */
+}
+
+/* Estilo para o conteúdo dentro do aside interno */
+.contAInterno { 
+    background-color: blueviolet; /* Define a cor de fundo como 'blueviolet' */
+    grid-column: 1/4; /* Faz o contAInterno ocupar da primeira até a terceira coluna */
+    text-align: center; /* Centraliza o texto horizontalmente */
+    height: 100%; /* Define a altura como 100% */
+}
+
+/* Estilo para o aside lateral */
+.aside-lateral { 
+    height: 500px; /* Define uma altura fixa de 500px */
+}
+
+/* Estilo para o rodapé */
+footer { 
+    margin-top: 10px; /* Define uma margem superior de 10px */
+    background-color: blueviolet; /* Define a cor de fundo como 'blueviolet' */
+    text-align: center; /* Centraliza o texto horizontalmente */
 }
